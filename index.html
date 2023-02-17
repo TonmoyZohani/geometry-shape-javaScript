@@ -10,7 +10,7 @@
   <body>
     <!-- navbar -->
     <nav
-      class="container mx-auto bg-sky-500/50 m-2 mb-4 p-3 flex flex-row justify-between rounded"
+      class="container w-8/12 mx-auto bg-sky-500/50 m-2 mb-4 p-3 flex flex-row justify-between rounded"
     >
       <div>
         <h3 class="text-3xl">Interactive</h3>
@@ -26,8 +26,8 @@
     </nav>
 
     <!-- shape card section -->
-    <main class="container mx-auto">
-      <div class="grid grid-cols-4 gap-4">
+    <main class="container lg:w-8/12 mx-auto flex justify-between">
+      <div class="grid grid-cols-3 gap-4">
         <!-- Triangle  -->
         <div
           class="w-72 h-96 bg-white hover:bg-pink-300 rounded-md shadow-md overflow-hidden border border-black-700"
@@ -42,12 +42,14 @@
 
             <div class="flex items-center justify-center mt-4 gap-2">
               <input
+                id="tri-base"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="b"
               />
               cm
               <input
+                id="tri-height"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="h"
@@ -56,6 +58,7 @@
             </div>
           </div>
           <button
+            id="btn-triangle"
             class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
           >
             Calculate
@@ -106,8 +109,8 @@
             style="background-image: url('./images/parallelogram.png')"
           ></div>
           <div class="p-4">
-            <h2 class="text-lg text-center font-bold">Rectangle</h2>
-            <p class="text-center text-gray-500">Area (A) = 0.5 x b x h</p>
+            <h2 class="text-lg text-center font-bold">Parallelogram</h2>
+            <p class="text-center text-gray-500">Area (A) = b x h</p>
 
             <div class="flex items-center justify-center mt-4 gap-2">
               <input
@@ -131,31 +134,6 @@
           </button>
         </div>
 
-        <!--Area Calculation-->
-
-        <div
-          class="w-90 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
-        >
-          <div class="p-4">
-            <h2 class="text-lg text-center font-bold underline">
-              Area Calculation
-            </h2>
-          </div>
-
-          <ol>
-            <li>
-              <div>
-                Triangle <span>12cm</span> <button>Convert to m</button>
-              </div>
-            </li>
-            <li>
-              <div>
-                Triangle <span>12cm</span> <button>Convert to m</button>
-              </div>
-            </li>
-          </ol>
-        </div>
-
         <!-- Rhombus -->
 
         <div
@@ -166,20 +144,20 @@
             style="background-image: url('./images/rhombus.png')"
           ></div>
           <div class="p-4">
-            <h2 class="text-lg text-center font-bold">Rectangle</h2>
-            <p class="text-center text-gray-500">Area (A) = 0.5 x b x h</p>
+            <h2 class="text-lg text-center font-bold">Rhombus</h2>
+            <p class="text-center text-gray-500">Area (A) = 0.5 x d1 x d2</p>
 
             <div class="flex items-center justify-center mt-4 gap-2">
               <input
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
-                placeholder="b"
+                placeholder="d1"
               />
               cm
               <input
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
-                placeholder="h"
+                placeholder="d2"
               />
               cm
             </div>
@@ -201,8 +179,8 @@
             style="background-image: url('./images/pentagon.png')"
           ></div>
           <div class="p-4">
-            <h2 class="text-lg text-center font-bold">Rectangle</h2>
-            <p class="text-center text-gray-500">Area (A) = 0.5 x b x h</p>
+            <h2 class="text-lg text-center font-bold">Pentagon</h2>
+            <p class="text-center text-gray-500">Area (A) = 0.5 x p x b</p>
 
             <div class="flex items-center justify-center mt-4 gap-2">
               <input
@@ -214,7 +192,7 @@
               <input
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
-                placeholder="h"
+                placeholder="p"
               />
               cm
             </div>
@@ -237,19 +215,19 @@
           ></div>
           <div class="p-4">
             <h2 class="text-lg text-center font-bold">Rectangle</h2>
-            <p class="text-center text-gray-500">Area (A) = 0.5 x b x h</p>
+            <p class="text-center text-gray-500">Area (A) = π x a x b</p>
 
             <div class="flex items-center justify-center mt-4 gap-2">
               <input
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
-                placeholder="b"
+                placeholder="a"
               />
               cm
               <input
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
-                placeholder="h"
+                placeholder="b"
               />
               cm
             </div>
@@ -261,6 +239,42 @@
           </button>
         </div>
       </div>
+
+      <div>
+        <!--Area Calculation-->
+
+        <div
+          class="w-80 h-80 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+        >
+          <div class="p-4">
+            <h2 class="text-lg text-center font-bold underline">
+              Area Calculation
+            </h2>
+          </div>
+
+          <ol id="list-container">
+            <li>
+              <div class="mb-2 flex items-center justify-center">
+                Triangle &nbsp; <span>12cm<sup>2</sup> </span>&nbsp; 
+                <button class="bg-blue-400 p-1 rounded">
+                  Convert to m<sup>2</sup>
+                </button>
+              </div>
+            </li>
+
+            <!-- <li class="flex items-center justify-center">
+              <div>
+                Triangle <span>12cm<sup>2</sup> </span>
+                <button class="bg-blue-400 p-1 rounded">
+                  Convert to m<sup>2</sup>
+                </button>
+              </div>
+            </li> -->
+          </ol>
+        </div>
+      </div>
     </main>
+
+    <script src="./js/app.js"></script>
   </body>
 </html>
