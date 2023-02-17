@@ -8,7 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <nav class="bg-sky-500/50 m-2 p-3 flex flex-row justify-between rounded">
+    <!-- navbar -->
+    <nav
+      class="container mx-auto bg-sky-500/50 m-2 mb-4 p-3 flex flex-row justify-between rounded"
+    >
       <div>
         <h3 class="text-3xl">Interactive</h3>
         <p class="text-1xl">Geometry Genius</p>
@@ -21,5 +24,228 @@
         </button>
       </div>
     </nav>
+
+    <!-- shape card section -->
+    <main class="container mx-auto">
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Triangle  -->
+        <div
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+        >
+          <div
+            class="mt-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
+            style="background-image: url('./images/triangle.png')"
+          ></div>
+          <div class="p-4">
+            <h2 class="text-lg text-center font-bold">Triangle</h2>
+            <p class="text-center text-gray-500">Area (A) = 0.5 x b x h</p>
+
+            <div class="flex items-center justify-center mt-4 gap-2">
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="b"
+              />
+              cm
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="h"
+              />
+              cm
+            </div>
+          </div>
+          <button
+            class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!-- Rectangle  -->
+        <div
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+        >
+          <div
+            class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
+            style="background-image: url('./images/rectangle.png')"
+          ></div>
+          <div class="p-4">
+            <h2 class="text-lg text-center font-bold">Rectangle</h2>
+            <p class="text-center text-gray-500">Area (A) = w x l</p>
+
+            <div class="flex items-center justify-center mt-4 gap-2">
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="w"
+              />
+              cm
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="l"
+              />
+              cm
+            </div>
+          </div>
+          <button
+            class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!-- Parallelogram  -->
+
+        <div
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+        >
+          <div
+            class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
+            style="background-image: url('./images/parallelogram.png')"
+          ></div>
+          <div class="p-4">
+            <h2 class="text-lg text-center font-bold">Rectangle</h2>
+            <p class="text-center text-gray-500">Area (A) = 0.5 x b x h</p>
+
+            <div class="flex items-center justify-center mt-4 gap-2">
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="b"
+              />
+              cm
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="h"
+              />
+              cm
+            </div>
+          </div>
+          <button
+            class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!--Area Calculation-->
+
+        <div
+          class="w-80 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700 underline"
+        >
+          <div class="p-4">
+            <h2 class="text-lg text-center font-bold">Area Calculation</h2>
+          </div>
+        </div>
+
+        <!-- Rhombus -->
+
+        <div
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+        >
+          <div
+            class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
+            style="background-image: url('./images/rhombus.png')"
+          ></div>
+          <div class="p-4">
+            <h2 class="text-lg text-center font-bold">Rectangle</h2>
+            <p class="text-center text-gray-500">Area (A) = 0.5 x b x h</p>
+
+            <div class="flex items-center justify-center mt-4 gap-2">
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="b"
+              />
+              cm
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="h"
+              />
+              cm
+            </div>
+          </div>
+          <button
+            class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!-- Pentagon -->
+
+        <div
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+        >
+          <div
+            class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
+            style="background-image: url('./images/pentagon.png')"
+          ></div>
+          <div class="p-4">
+            <h2 class="text-lg text-center font-bold">Rectangle</h2>
+            <p class="text-center text-gray-500">Area (A) = 0.5 x b x h</p>
+
+            <div class="flex items-center justify-center mt-4 gap-2">
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="b"
+              />
+              cm
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="h"
+              />
+              cm
+            </div>
+          </div>
+          <button
+            class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!-- Ellipse -->
+
+        <div
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+        >
+          <div
+            class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
+            style="background-image: url('./images/ellipse.png')"
+          ></div>
+          <div class="p-4">
+            <h2 class="text-lg text-center font-bold">Rectangle</h2>
+            <p class="text-center text-gray-500">Area (A) = 0.5 x b x h</p>
+
+            <div class="flex items-center justify-center mt-4 gap-2">
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="b"
+              />
+              cm
+              <input
+                class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
+                type="text"
+                placeholder="h"
+              />
+              cm
+            </div>
+          </div>
+          <button
+            class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
+          >
+            Calculate
+          </button>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
