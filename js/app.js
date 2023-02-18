@@ -32,16 +32,20 @@ function positiveValidation(value1, value2) {
 
 // Creating the list element for area calculation
 function createListElement(name, serialNo, area) {
-  const list = document.createElement("li");
-  list.innerHTML = `<div class="mb-2 flex items-center justify-center">${serialNo}.
+  if (serialNo <= 6) {
+    const list = document.createElement("li");
+    list.innerHTML = `<div class="mb-2 flex items-center justify-center">${serialNo}.
                 ${name} &nbsp; <span> ${area} cm<sup>2</sup> </span>&nbsp; 
                 <button class="bg-blue-400 p-1 rounded">
                   Convert to m<sup>2</sup>
                 </button>
               </div>`;
-  console.log(list);
+    console.log(list);
 
-  document.getElementById("list-container").appendChild(list);
+    document.getElementById("list-container").appendChild(list);
+  } else {
+    alert("You can not make operation more than six");
+  }
 }
 
 let serialNo = 0;
@@ -49,8 +53,6 @@ let serialNo = 0;
 document.getElementById("blog-btn").addEventListener("click", function () {
   window.location.href = "blog.html";
 });
-
-
 
 // Triangle area calculation
 
@@ -87,7 +89,7 @@ document.getElementById("btn-rectangle").addEventListener("click", function () {
     const rectangleWidth = convertStringToValue(rectangleWidthStr);
     const rectangleLength = convertStringToValue(rectangleLengthStr);
 
-    if (positiveValidation(rectangleWidth, rectangleWidth)) {
+    if (positiveValidation(rectangleWidth, rectangleLength)) {
       alert("Don't give negative input");
     } else {
       serialNo++;
@@ -165,21 +167,41 @@ document.getElementById("btn-pent").addEventListener("click", function () {
 // Ellipse area calculation
 
 document.getElementById("btn-ellipse").addEventListener("click", function () {
-  const ellipseAxisStr = document.getElementById("axis").value;
-  const ellipseBaseStr = document.getElementById("base").value;
+  const axisValStr = document.getElementById("axisVal").value;
+  const baseValStr = document.getElementById("baseVal").value;
 
-  if (emptyValidation(ellipseAxisStr, ellipseBaseStr)) {
+  if (emptyValidation(axisValStr, baseValStr)) {
     alert("Please,Enter valid input");
   } else {
-    const ellipseAxis = convertStringToValue(ellipseAxisStr);
-    const ellipseBase = convertStringToValue(ellipseBaseStr);
+    const axisVal = convertStringToValue(axisValStr);
+    const baseVal = convertStringToValue(baseValStr);
 
-    if (positiveValidation(ellipseAxis, ellipseBase)) {
+    if (positiveValidation(axisVal, baseVal)) {
       alert("Don't give negative input");
     } else {
       serialNo++;
-      const area = 3.1416 * multiPlyTwo(ellipseAxis, ellipseBase);
+      const area = (multiPlyTwo(axisVal, baseVal) * 3.1416).toFixed(2);
       createListElement("Ellipse", serialNo, area);
     }
   }
 });
+
+// document.getElementById("btn-ellipse").addEventListener("click", function () {
+//   const ellipseAxisStr = document.getElementById("axis").value;
+//   const ellipseBaseStr = document.getElementById("base").value;
+
+//   if (emptyValidation(ellipseAxisStr, ellipseBaseStr)) {
+//     alert("Please,Enter valid input");
+//   } else {
+//     const ellipseAxis = convertStringToValue(ellipseAxisStr);
+//     const ellipseBase = convertStringToValue(ellipseBaseStr);
+
+//     if (positiveValidation(ellipseAxis, ellipseBase)) {
+//       alert("Don't give negative input");
+//     } else {
+//       serialNo++;
+//       const area = 3.1416 * multiPlyTwo(ellipseAxis, ellipseBase);
+//       createListElement("Ellipse", serialNo, area);
+//     }
+//   }
+// });
