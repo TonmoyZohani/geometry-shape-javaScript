@@ -18,6 +18,7 @@
       </div>
       <div>
         <button
+          id="blog-btn"
           class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow m-3"
         >
           Blog
@@ -28,9 +29,9 @@
     <!-- shape card section -->
     <main class="container lg:w-8/12 mx-auto flex justify-between">
       <div class="grid grid-cols-3 gap-4">
-        <!-- Triangle  -->
         <div
-          class="w-72 h-96 bg-white hover:bg-pink-300 rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          id="triangle"
         >
           <div
             class="mt-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
@@ -67,7 +68,8 @@
 
         <!-- Rectangle  -->
         <div
-          class="w-72 h-96 bg-white hover:bg-rose-300 rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          id="rectangle"
         >
           <div
             class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
@@ -78,13 +80,15 @@
             <p class="text-center text-gray-500">Area (A) = w x l</p>
 
             <div class="flex items-center justify-center mt-4 gap-2">
-              <input id="rect-width"
+              <input
+                id="rect-width"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="w"
               />
               cm
-              <input id="rect-length"
+              <input
+                id="rect-length"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="l"
@@ -92,7 +96,8 @@
               cm
             </div>
           </div>
-          <button id="btn-rectangle"
+          <button
+            id="btn-rectangle"
             class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
           >
             Calculate
@@ -102,7 +107,8 @@
         <!-- Parallelogram  -->
 
         <div
-          class="w-72 h-96 bg-white hover:bg-fuchsia-300 rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          id="parallelogram"
         >
           <div
             class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
@@ -129,7 +135,8 @@
               cm
             </div>
           </div>
-          <button id="btn-para"
+          <button
+            id="btn-para"
             class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
           >
             Calculate
@@ -139,7 +146,8 @@
         <!-- Rhombus -->
 
         <div
-          class="w-72 h-96 bg-white hover:bg-purple-300 rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          id="rhombus"
         >
           <div
             class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
@@ -151,12 +159,14 @@
 
             <div class="flex items-center justify-center mt-4 gap-2">
               <input
+                id="diagOne"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="d1"
               />
               cm
               <input
+                id="diagTwo"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="d2"
@@ -165,6 +175,7 @@
             </div>
           </div>
           <button
+            id="btn-rhombus"
             class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
           >
             Calculate
@@ -174,7 +185,8 @@
         <!-- Pentagon -->
 
         <div
-          class="w-72 h-96 bg-white hover:bg-blue-300 rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          id="pentagon"
         >
           <div
             class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
@@ -186,12 +198,14 @@
 
             <div class="flex items-center justify-center mt-4 gap-2">
               <input
+                id="base"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="b"
               />
               cm
               <input
+                id="pent"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="p"
@@ -200,6 +214,7 @@
             </div>
           </div>
           <button
+            id="btn-pent"
             class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
           >
             Calculate
@@ -209,24 +224,27 @@
         <!-- Ellipse -->
 
         <div
-          class="w-72 h-96 bg-white hover:bg-teal-300 rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          id="ellipse"
         >
           <div
             class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
             style="background-image: url('./images/ellipse.png')"
           ></div>
           <div class="p-4">
-            <h2 class="text-lg text-center font-bold">Rectangle</h2>
+            <h2 class="text-lg text-center font-bold">Ellipse</h2>
             <p class="text-center text-gray-500">Area (A) = π x a x b</p>
 
             <div class="flex items-center justify-center mt-4 gap-2">
               <input
+                id="axis"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="a"
               />
               cm
               <input
+                id="base"
                 class="bg-gray-200 w-16 h-6 border border-gray-400 rounded px-2"
                 type="text"
                 placeholder="b"
@@ -235,6 +253,7 @@
             </div>
           </div>
           <button
+            id="btn-ellipse"
             class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-16 rounded shadow flex items-center justify-center"
           >
             Calculate
@@ -257,7 +276,7 @@
           <ol id="list-container">
             <li>
               <div class="mb-2 flex items-center justify-center">
-                Triangle &nbsp; <span>12cm<sup>2</sup> </span>&nbsp; 
+                1. Triangle &nbsp; <span>12cm<sup>2</sup> </span>&nbsp;
                 <button class="bg-blue-400 p-1 rounded">
                   Convert to m<sup>2</sup>
                 </button>
@@ -276,7 +295,7 @@
         </div>
       </div>
     </main>
-
+    <script src="./js/background.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+     <nav
+      class="container w-7/12 mx-auto bg-sky-500/50 m-2 mb-4 p-3 flex flex-row justify-between rounded"
+    >
+      <div class="flex justify-center items-center">
+        <h1 class="text-4xl text-center text-pink-700 font-bold ">
+      JavaScript DOM Blog</h1>
+      </div>
+
+      <div>
+        <button
+          id="home-btn"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow m-3"
+        >
+          <a href="./index.html">Back HomePage</a> 
+        </button>
+      </div>
+    </nav>
+   
+
+    <main>
+      <div class="grid grid-cols-1 gap-4">
+        <div
+          class="w-7/12 mx-auto bg-white p-4 rounded-md shadow-md border border-gray-300"
+        >
+          <h3 class="text-lg font-semibold mb-1">
+            <span class="text-purple-700">Question 1:</span> What is DOM? What
+            is the purpose of DOM?
+          </h3>
+          <p class="font-medium mb-2">
+            <span class="text-green-600">Answer:</span>
+            The full meaning of DOM is Document Object Model.DOM represents the
+            HTML pages in such a way that it can be easily modified with
+            programming language. <br />
+            When we write a webpage in HTML, we can see it through the browser.
+         Basically what we see in the browser and what we see in the
+            page source are the same. But DOM represents this document in an
+            object oriented way so that we can interact with this page with the
+            help of DOM.With
+            the help of DOM we can access everything on our page, modify it
+            easily if needed.
+          </p>
+        </div>
+        <div
+          class="w-7/12 mx-auto bg-white p-4 rounded-md shadow-md border border-gray-300"
+        >
+          <h3 class="text-lg font-semibold mb-1">
+            <span class="text-purple-700">Question 2:</span> How to select elements in DOM?
+          </h3>
+          <p class="font-medium mb-2">
+            <span class="text-green-600">Answer:</span>
+            We can select elements in DOM by using various selectors. Here are,
+            <br />
+            <ol class="font-medium">
+                <li>1.getElementById()</li>
+                <li>2.getElementsByTagName()</li>
+                <li>3.getElementsByClassName()</li>
+                <li>4.querySelector()</li>
+                <li>5.querySelectorAll()</li>
+            </ol>
+          </p>
+        </div>
+
+         <div
+          class="w-7/12 mx-auto bg-white p-4 rounded-md shadow-md border border-gray-300"
+        >
+          <h3 class="text-lg font-semibold mb-1">
+            <span class="text-purple-700">Question 3:</span> What is Event Bubbling?
+          </h3>
+          <p class="font-medium mb-2">
+            <span class="text-green-600">Answer:</span>
+            A JavaScript event-handling concept is called event bubbling.<br />
+             When an event happens in the event handler function, it can be sent from one single event handler to another single event handler. Once the original event has begun, all related events are handled in the following map.
+When an event takes place in one of the event handlers, that event tries to move forward to the next handler if there is one. 
+          </p>
+        </div>
+     
+         <div
+          class="w-7/12 mx-auto bg-white p-4 rounded-md shadow-md border border-gray-300"
+        >
+          <h3 class="text-lg font-semibold mb-1">
+            <span class="text-purple-700">Question 4:</span> What is callback function? What can we do with it?
+          </h3>
+          <p class="font-medium mb-2">
+            <span class="text-green-600">Answer:</span>
+            A callback function is simply a function that is executed after another function is executed. And that's why it's called a callback function.<br />
+           It helps developers to write asynchronous JavaScript code and avoids errors and problems.Because It make sure that a function won't execute before the task is finished, but will instead run immediately after the task has finished.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
