@@ -9,7 +9,7 @@
   </head>
   <body>
 
-    <nav class="container mx-auto bg-sky-500/50 m-2 mb-4 p-3 rounded">
+<nav class="container mx-auto w-7/12 bg-sky-500/50 m-2 mb-4 p-3 rounded flex flex-row justify-between items-center">
   <div class="flex flex-col sm:flex-row justify-center items-center">
     <h1 class="text-2xl sm:text-4xl text-center text-pink-700 font-bold">
       JavaScript DOM Blog
@@ -37,14 +37,12 @@
             <span class="text-green-600">Answer:</span>
             The full meaning of DOM is Document Object Model.DOM represents the
             HTML pages in such a way that it can be easily modified with
-            programming language. <br />
+            JavaScript. <br />
             When we write a webpage in HTML, we can see it through the browser.
          Basically what we see in the browser and what we see in the
             page source are the same. But DOM represents this document in an
             object oriented way so that we can interact with this page with the
-            help of DOM.With
-            the help of DOM we can access everything on our page, modify it
-            easily if needed.
+            help of DOM.
           </p>
         </div>
         <div
@@ -75,9 +73,8 @@
           </h3>
           <p class="font-medium mb-2">
             <span class="text-green-600">Answer:</span>
-            A JavaScript event-handling concept is called event bubbling.<br />
-             When an event happens in the event handler function, it can be sent from one single event handler to another single event handler. Once the original event has begun, all related events are handled in the following map.
-When an event takes place in one of the event handlers, that event tries to move forward to the next handler if there is one. 
+            Event bubbling is a JavaScript event-handling concept.<br />
+           When an element takes one event and sends that to the DOM until it reach to the parent or previous element.It is a continuous process,By using event.stopPropagation() method, we can stop event bubbling.
           </p>
         </div>
      

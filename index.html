@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Genius</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
@@ -30,12 +31,10 @@
     <main
       class="container w-9/12 mx-auto flex flex-col sm:flex-row justify-between"
     >
-
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-10">
      <!-- Triange -->
-
         <div
-          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 rounded-md shadow-md overflow-hidden border border-black-700 custom-white"
           id="triangle"
         >
           <div
@@ -73,7 +72,7 @@
 
         <!-- Rectangle  -->
         <div
-          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 rounded-md shadow-md overflow-hidden border border-black-700 custom-white"
           id="rectangle"
         >
           <div
@@ -112,7 +111,7 @@
         <!-- Parallelogram  -->
 
         <div
-          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 rounded-md shadow-md overflow-hidden border border-black-700 custom-white"
           id="parallelogram"
         >
           <div
@@ -151,7 +150,7 @@
         <!-- Rhombus -->
 
         <div
-          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 rounded-md shadow-md overflow-hidden border border-black-700 custom-white"
           id="rhombus"
         >
           <div
@@ -190,7 +189,7 @@
         <!-- Pentagon -->
 
         <div
-          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 rounded-md shadow-md overflow-hidden border border-black-700 custom-white"
           id="pentagon"
         >
           <div
@@ -229,13 +228,9 @@
         <!-- Ellipse -->
 
         <div
-          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 rounded-md shadow-md overflow-hidden border border-black-700 mb-2 custom-white"
           id="ellipse"
         >
-          <!-- <div
-            class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
-            style="background-image: url('./images/ellipse.png')"
-          ></div> -->
           <div class="mt-8 mx-8 w-48 h-20 sm:w-auto sm:h-40 bg-contain bg-center bg-no-repeat" style="background-image: url('./images/ellipse.png')"></div>
 
           <div class="p-4">
@@ -268,18 +263,17 @@
         </div>
       </div>
         <!--Area Calculation-->
-
         <div
-          class="w-full sm:w-1/4 h-48 sm:h-auto bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full h-40 sm:w-1/4 h-96 sm:h-auto lg:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
         >
           <div class="p-4">
             <h2 class="text-lg text-center font-bold underline">
               Area Calculation
             </h2>
           </div>
-
           <ol id="list-container"></ol>
         </div>
+
       </div>
     </main>
     <script src="./js/background.js"></script>

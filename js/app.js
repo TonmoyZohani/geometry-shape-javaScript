@@ -1,3 +1,5 @@
+let serialNo = 0;
+
 // Converting the string value
 function convertStringToValue(value) {
   return parseFloat(value);
@@ -23,7 +25,7 @@ function emptyValidation(value1, value2) {
 
 // Positive value validation check
 function positiveValidation(value1, value2) {
-  if (value1 < 0 || value2 < 0) {
+  if (value1 <= 0 || value2 <= 0 || isNaN(value1) || isNaN(value2)) {
     return true;
   } else {
     return false;
@@ -32,7 +34,7 @@ function positiveValidation(value1, value2) {
 
 // Creating the list element for area calculation
 function createListElement(name, serialNo, area) {
-  if (serialNo <= 20) {
+  if (serialNo <= 8) {
     const list = document.createElement("li");
     list.innerHTML = `<div class="mb-2 flex items-center justify-center">${serialNo}.
                 ${name} &nbsp; <span> ${area} cm<sup>2</sup> </span>&nbsp; 
@@ -48,8 +50,7 @@ function createListElement(name, serialNo, area) {
   }
 }
 
-let serialNo = 0;
-
+// Going to the blog page
 document.getElementById("blog-btn").addEventListener("click", function () {
   window.location.href = "blog.html";
 });
@@ -67,7 +68,7 @@ document.getElementById("btn-triangle").addEventListener("click", function () {
     const triangleBase = convertStringToValue(triangleBaseStr);
 
     if (positiveValidation(triangleHeight, triangleBase)) {
-      alert("Don't give negative input");
+      alert("Please, Enter valid inputt");
     } else {
       serialNo++;
       const area = multiPlyThree(triangleHeight, triangleBase);
@@ -90,7 +91,7 @@ document.getElementById("btn-rectangle").addEventListener("click", function () {
     const rectangleLength = convertStringToValue(rectangleLengthStr);
 
     if (positiveValidation(rectangleWidth, rectangleLength)) {
-      alert("Don't give negative input");
+      alert("Please, Enter valid inputt");
     } else {
       serialNo++;
       const area = multiPlyTwo(rectangleWidth, rectangleLength);
@@ -112,7 +113,7 @@ document.getElementById("btn-para").addEventListener("click", function () {
     const paraHeight = convertStringToValue(paraHeightStr);
 
     if (positiveValidation(paraWidth, paraHeight)) {
-      alert("Don't give negative input");
+      alert("Please, Enter valid inputt");
     } else {
       serialNo++;
       const area = multiPlyTwo(paraWidth, paraHeight);
@@ -134,7 +135,7 @@ document.getElementById("btn-rhombus").addEventListener("click", function () {
     const rhomDiagTwo = convertStringToValue(rhomDiagTwoStr);
 
     if (positiveValidation(rhomDiagOne, rhomDiagTwo)) {
-      alert("Don't give negative input");
+      alert("Please, Enter valid inputt");
     } else {
       serialNo++;
       const area = multiPlyThree(rhomDiagOne, rhomDiagTwo);
@@ -155,7 +156,7 @@ document.getElementById("btn-pent").addEventListener("click", function () {
     const pent = convertStringToValue(pentStr);
 
     if (positiveValidation(base, pent)) {
-      alert("Don't give negative input");
+      alert("Please, Enter valid inputt");
     } else {
       serialNo++;
       const area = multiPlyThree(base, pent);
@@ -177,7 +178,7 @@ document.getElementById("btn-ellipse").addEventListener("click", function () {
     const baseVal = convertStringToValue(baseValStr);
 
     if (positiveValidation(axisVal, baseVal)) {
-      alert("Don't give negative input");
+      alert("Please, Enter valid inputt");
     } else {
       serialNo++;
       const area = (multiPlyTwo(axisVal, baseVal) * 3.1416).toFixed(2);
@@ -185,23 +186,3 @@ document.getElementById("btn-ellipse").addEventListener("click", function () {
     }
   }
 });
-
-// document.getElementById("btn-ellipse").addEventListener("click", function () {
-//   const ellipseAxisStr = document.getElementById("axis").value;
-//   const ellipseBaseStr = document.getElementById("base").value;
-
-//   if (emptyValidation(ellipseAxisStr, ellipseBaseStr)) {
-//     alert("Please,Enter valid input");
-//   } else {
-//     const ellipseAxis = convertStringToValue(ellipseAxisStr);
-//     const ellipseBase = convertStringToValue(ellipseBaseStr);
-
-//     if (positiveValidation(ellipseAxis, ellipseBase)) {
-//       alert("Don't give negative input");
-//     } else {
-//       serialNo++;
-//       const area = 3.1416 * multiPlyTwo(ellipseAxis, ellipseBase);
-//       createListElement("Ellipse", serialNo, area);
-//     }
-//   }
-// });
