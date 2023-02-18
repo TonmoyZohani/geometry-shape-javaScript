@@ -27,13 +27,15 @@
     </nav>
 
     <!-- shape card section -->
-    <main class="container lg:w-9/12 mx-auto flex justify-between">
+    <main
+      class="container w-9/12 mx-auto flex flex-col sm:flex-row justify-between"
+    >
 
-      <!-- Triange -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-10">
+     <!-- Triange -->
 
-      <div class="grid grid-cols-3 gap-10">
         <div
-          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
           id="triangle"
         >
           <div
@@ -71,7 +73,7 @@
 
         <!-- Rectangle  -->
         <div
-          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
           id="rectangle"
         >
           <div
@@ -110,7 +112,7 @@
         <!-- Parallelogram  -->
 
         <div
-          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
           id="parallelogram"
         >
           <div
@@ -149,7 +151,7 @@
         <!-- Rhombus -->
 
         <div
-          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
           id="rhombus"
         >
           <div
@@ -188,7 +190,7 @@
         <!-- Pentagon -->
 
         <div
-          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
           id="pentagon"
         >
           <div
@@ -227,13 +229,15 @@
         <!-- Ellipse -->
 
         <div
-          class="w-72 h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-72 h-96 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
           id="ellipse"
         >
-          <div
+          <!-- <div
             class="mt-8 mx-8 w-auto h-40 bg-contain bg-center bg-no-repeat"
             style="background-image: url('./images/ellipse.png')"
-          ></div>
+          ></div> -->
+          <div class="mt-8 mx-8 w-48 h-20 sm:w-auto sm:h-40 bg-contain bg-center bg-no-repeat" style="background-image: url('./images/ellipse.png')"></div>
+
           <div class="p-4">
             <h2 class="text-lg text-center font-bold">Ellipse</h2>
             <p class="text-center text-gray-500">Area (A) = π x a x b</p>
@@ -262,15 +266,11 @@
             Calculate
           </button>
         </div>
-
-
       </div>
-
-      <div>
         <!--Area Calculation-->
 
         <div
-          class="w-96 h-80 gap-2 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+          class="w-full sm:w-1/4 h-48 sm:h-auto bg-white rounded-md shadow-md overflow-hidden border border-black-700"
         >
           <div class="p-4">
             <h2 class="text-lg text-center font-bold underline">

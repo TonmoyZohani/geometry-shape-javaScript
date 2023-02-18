@@ -32,7 +32,7 @@ function positiveValidation(value1, value2) {
 
 // Creating the list element for area calculation
 function createListElement(name, serialNo, area) {
-  if (serialNo <= 6) {
+  if (serialNo <= 20) {
     const list = document.createElement("li");
     list.innerHTML = `<div class="mb-2 flex items-center justify-center">${serialNo}.
                 ${name} &nbsp; <span> ${area} cm<sup>2</sup> </span>&nbsp; 
@@ -44,7 +44,7 @@ function createListElement(name, serialNo, area) {
 
     document.getElementById("list-container").appendChild(list);
   } else {
-    alert("You can not make operation more than six");
+    alert("You can not make operation more than twenty");
   }
 }
 

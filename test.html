@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Genius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="container w-9/12 mx-auto bg-sky-500/50 m-2 mb-4 p-3 flex flex-row justify-between rounded"
+    >
+      <div>
+        <h3 class="text-3xl">Interactive</h3>
+        <p class="text-1xl">Geometry Genius</p>
+      </div>
+      <div>
+        <button
+          id="blog-btn"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow m-3"
+        >
+          Blog
+        </button>
+      </div>
+    </nav>
+
+    <!-- shape card section -->
+    <main class="container w-9/12 mx-auto flex flex-col sm:flex-row justify-between">
+  <!-- Triange -->
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-10">
+    <div
+      class="w-full sm:w-72 h-48 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+      id="triangle"
+    >
+      Card 1
+    </div>
+
+    <!-- Rectangle  -->
+    <div
+      class="w-full sm:w-72 h-48 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+      id="rectangle"
+    >
+      card 2
+    </div>
+
+    <!-- Parallelogram  -->
+
+    <div
+      class="w-full sm:w-72 h-48 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+      id="parallelogram"
+    >
+      <p>Card 3</p>
+    </div>
+
+    <!-- Rhombus -->
+
+    <div
+      class="w-full sm:w-72 h-48 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+      id="rhombus"
+    >
+      card 4
+    </div>
+
+    <!-- Pentagon -->
+
+    <div
+      class="w-full sm:w-72 h-48 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+      id="pentagon"
+    >
+      card 5
+    </div>
+
+    <!-- Ellipse -->
+
+    <div
+      class="w-full sm:w-72 h-48 sm:h-96 bg-white rounded-md shadow-md overflow-hidden border border-black-700"
+      id="ellipse"
+    >
+      card 6
+    </div>
+  </div>
+
+  <div class="w-full sm:w-1/4 h-48 sm:h-auto bg-white rounded-md shadow-md overflow-hidden border border-black-700">
+    card 7
+  </div>
+</main>
+    </main>
+    <script src="./js/background.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
