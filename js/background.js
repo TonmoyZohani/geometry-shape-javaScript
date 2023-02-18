@@ -1,3 +1,4 @@
+// Generating random color
 function randomColor() {
   const letters = "0123456789ABCDEF";
   let color = "#";
@@ -7,11 +8,13 @@ function randomColor() {
   return color;
 }
 
+// Changing background color using random color
 function setRandomBackgroundColor(elementId) {
   const element = document.getElementById(elementId);
   element.style.backgroundColor = randomColor();
 }
 
+// Selecting the id's of the shapes
 document.getElementById("triangle").addEventListener("mouseenter", function () {
   setRandomBackgroundColor("triangle");
 });

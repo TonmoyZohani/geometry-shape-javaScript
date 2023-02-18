@@ -46,7 +46,7 @@ function createListElement(name, serialNo, area) {
 
     document.getElementById("list-container").appendChild(list);
   } else {
-    alert("You can not make operation more than twenty");
+    alert("You can not make operation more than eight");
   }
 }
 
