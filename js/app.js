@@ -27,10 +27,10 @@ function positiveValidation(value1, value2) {
 }
 
 // Creating the list element for area calculation
-function createListElement(area) {
+function createListElement(name,area) {
   const list = document.createElement("li");
   list.innerHTML = `<div class="mb-2 flex items-center justify-center">
-                Triangle &nbsp; <span> ${area} cm<sup>2</sup> </span>&nbsp; 
+                ${name} &nbsp; <span> ${area} cm<sup>2</sup> </span>&nbsp; 
                 <button class="bg-blue-400 p-1 rounded">
                   Convert to m<sup>2</sup>
                 </button>
@@ -57,7 +57,7 @@ document.getElementById("btn-triangle").addEventListener("click", function () {
     } else {
       const area = 0.5 * multiPly(triangleHeight, triangleBase);
 
-      createListElement(area);
+      createListElement('Triangle',area);
     }
   }
 });
@@ -79,7 +79,29 @@ document.getElementById("btn-rectangle").addEventListener("click", function () {
     } else {
       const area = multiPly(rectangleWidth, rectangleLength);
 
-      createListElement(area);
+      createListElement('Rectangle',area);
+    }
+  }
+});
+
+// Parallelogram area calculation
+
+document.getElementById("btn-para").addEventListener("click", function () {
+  const paraBaseStr = document.getElementById("paraBase").value;
+  const paraHeightStr = document.getElementById("paraHeight").value;
+
+  if (emptyValidation(paraBaseStr, paraHeightStr)) {
+    alert("Please,Enter valid input");
+  } else {
+    const paraWidth = convertStringToValue(paraBaseStr);
+    const paraHeight = convertStringToValue(paraHeightStr);
+
+    if (positiveValidation(paraWidth, paraHeight)) {
+      alert("Don't give negative input");
+    } else {
+      const area = multiPly(paraWidth, paraHeight);
+
+      createListElement('Parallelogram',area);
     }
   }
 });
